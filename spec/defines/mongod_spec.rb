@@ -7,7 +7,7 @@ describe 'mongodb::mongod' , :type => :define do
   context 'with defaults for all parameters on pre-systemd RedHat' do
     let(:facts) {{ :osfamily => 'redhat', :operatingsystem => 'RedHat', :operatingsystemmajrelease => '6', :puppetversion => Puppet.version }}
     let :pre_condition do
-      'include ::mongodb'
+      'include mongodb'
     end
     it { should contain_mongodb__mongod('testdb') }
     context 'with deactivate_transparent_hugepage set' do
