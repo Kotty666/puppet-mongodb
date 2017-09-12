@@ -4,7 +4,7 @@ class mongodb::params {
 
   $enterprise = false
 
-  if ($::mongodb::enterprise) {
+  if ($enterprise) {
     ## FIXME: only Debian supported at the moment
     case $::osfamily {
       'Debian': {
