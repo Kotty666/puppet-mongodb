@@ -46,7 +46,7 @@ class mongodb::params {
 
   case $::osfamily {
     'Debian': {
-      if ($::operatingsystem == "Ubuntu") {
+      if ($::operatingsystem == 'Ubuntu') {
         $systemd_os = versioncmp($::operatingsystemmajrelease, '15.10') > 0
       } else {
         $systemd_os = versioncmp($::operatingsystemmajrelease, '8') >= 0
