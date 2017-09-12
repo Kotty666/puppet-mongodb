@@ -16,7 +16,7 @@ class mongodb (
   $run_as_group             = $mongodb::params::run_as_group,
   $old_servicename          = $mongodb::params::old_servicename,
   $use_yamlconfig           = false,
-  $use_enterprise           = false
+  $use_enterprise           = $mongodb::params::enterprise,
 ) inherits mongodb::params {
 
   anchor { 'mongodb::begin': before => Anchor['mongodb::install::begin'], }

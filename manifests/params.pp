@@ -2,6 +2,8 @@
 #
 class mongodb::params {
 
+  $enterprise = false
+
   if ($::mongodb::enterprise) {
     ## FIXME: only Debian supported at the moment
     case $::osfamily {
